@@ -8,76 +8,77 @@
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background: url('{{ asset('images/gelo.jpg') }}') no-repeat center center fixed;
-            background-size: cover;
-            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
             display: flex;
+            height: 100vh;
             justify-content: center;
             align-items: center;
         }
 
         .login-box {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(12px);
-            border-radius: 16px;
-            padding: 40px;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 100%;
-            max-width: 400px;
-            color: #fff;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+            max-width: 350px;
         }
 
         h2 {
             text-align: center;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         label {
+            font-weight: bold;
             display: block;
             margin-bottom: 5px;
-            font-weight: bold;
         }
 
-        input {
+        input[type="email"],
+        input[type="password"] {
             width: 100%;
-            padding: 12px;
+            padding: 10px;
             margin-bottom: 15px;
-            border-radius: 8px;
-            border: none;
-            outline: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
         }
 
         button {
             width: 100%;
-            padding: 12px;
-            border-radius: 8px;
-            background: linear-gradient(to right, #667eea, #764ba2);
+            padding: 10px;
+            background-color: #007BFF;
             color: white;
             border: none;
+            border-radius: 4px;
             font-weight: bold;
             cursor: pointer;
         }
 
-        .error {
-            color: #ff6b6b;
-            text-align: center;
-            margin-bottom: 15px;
+        button:hover {
+            background-color: #0056b3;
         }
 
         .footer {
-            margin-top: 20px;
             text-align: center;
+            margin-top: 15px;
             font-size: 14px;
         }
 
         .footer a {
-            color: #1d1d1d;
+            color: #007BFF;
             text-decoration: none;
         }
 
         .footer a:hover {
             text-decoration: underline;
+        }
+
+        .error {
+            color: red;
+            margin-bottom: 15px;
+            text-align: center;
         }
     </style>
 </head>
@@ -101,7 +102,7 @@
         </form>
 
         <div class="footer">
-            <p>Belum punya akun? <a href="{{ url('/register') }}">Daftar sekarang</a></p>
+            <p>Belum punya akun? <a href="{{ url('/register') }}">Daftar di sini</a></p>
         </div>
     </div>
 </body>
